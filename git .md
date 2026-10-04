@@ -9,4 +9,8 @@
 
 # git commit -m "salva o ponto da versão"
  
- # git log : navega entre os commits.
+# git log : navega entre os commits. 
+
+# navegando pelos commits: utilizado git log junto com id no commit conseguimos voltar atrar do projeto antes de ser alterado.
+
+# git checkout junto com id do commit mostra um commit anterior:

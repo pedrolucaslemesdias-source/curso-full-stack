@@ -13,4 +13,6 @@
 
 # navegando pelos commits: utilizado git log junto com id no commit conseguimos voltar atrar do projeto antes de ser alterado.
 
-# git checkout junto com id do commit mostra um commit anterior:
+# git checkout junto com id do commit mostra um commit anterior:("Passado")
+
+# git checkout master(commit futuro)

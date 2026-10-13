@@ -1,0 +1,438 @@
+
+Full-Stack
+ferramentas: figma: designer
+visual studio-code: editor de código
+tldraw: desenh
+whimsical:mapa mental
+Notion e obsidiana:anotações.
+
+Terminal:git bash
+
+DOCUMENTAÇÃO: MDN DEVDOCS.io
+
+DEVTOOLS: FERRAMENTAS.
+
+
+
+GUIA DE HTML — TAGS, FUNCIONALIDADES E QUANDO USAR
+=====================================================
+
+Este arquivo reúne as principais tags HTML, explica para que servem e mostra exemplos de uso.
+HTML define a estrutura e o significado do conteúdo. CSS cuida da aparência e JavaScript da interação.
+
+1. ESTRUTURA BÁSICA DE UMA PÁGINA
+---------------------------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha página</title>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Minha primeira página HTML.</p>
+</body>
+</html>
+
+<!DOCTYPE html> — informa ao navegador que o documento usa HTML moderno.
+<html> — elemento raiz; envolve todo o documento. O atributo lang indica o idioma.
+<head> — contém metadados, título, links para CSS e outras configurações; normalmente não aparece como conteúdo da página.
+<meta charset="UTF-8"> — permite exibir corretamente letras acentuadas e outros caracteres.
+<meta name="viewport" ...> — ajuda a página a se adaptar à largura de celulares e outros dispositivos.
+<title> — define o título exibido na aba do navegador.
+<body> — contém o conteúdo visível da página.
+
+2. TÍTULOS, PARÁGRAFOS E DIVISÕES
+---------------------------------
+
+<h1> até <h6> — títulos organizados por nível. h1 é o título principal; h6 é o nível menos importante.
+Use os níveis em ordem lógica, sem escolher uma tag apenas pelo tamanho visual.
+<p> — parágrafo de texto.
+<br> — quebra de linha dentro de um texto, quando necessária.
+<hr> — separação temática entre partes do conteúdo.
+<div> — contêiner genérico em bloco, útil para agrupar elementos e aplicar CSS.
+<span> — contêiner genérico em linha, útil para estilizar uma parte do texto.
+
+Exemplo:
+<h1>Meu site</h1>
+<h2>Sobre mim</h2>
+<p>Estou aprendendo HTML.</p>
+<p>Este texto tem uma<br>quebra de linha.</p>
+<hr>
+<div class="cartao">Conteúdo agrupado</div>
+<p>Uma palavra <span class="destaque">destacada</span>.</p>
+
+3. FORMATAÇÃO E SIGNIFICADO DO TEXTO
+-----------------------------------
+
+<strong> — indica importância; normalmente aparece em negrito.
+<em> — dá ênfase; normalmente aparece em itálico.
+<b> — chama atenção visualmente sem acrescentar importância semântica.
+<i> — texto em voz ou estilo diferente, como um termo técnico.
+<mark> — destaca um trecho.
+<s> — indica conteúdo que já não é correto ou relevante.
+<del> — indica conteúdo removido de uma edição.
+<ins> — indica conteúdo inserido em uma edição.
+<small> — observações ou texto secundário.
+<sub> — texto subscrito, como H₂O.
+<sup> — texto sobrescrito, como x².
+<blockquote> — citação longa em bloco.
+<q> — citação curta dentro de uma frase.
+<abbr> — abreviação; pode usar title para explicar.
+<cite> — título de uma obra citada.
+<time> — representa uma data ou hora.
+<code> — trecho de código.
+<pre> — texto pré-formatado, preservando espaços e quebras de linha.
+<kbd> — entrada feita pelo teclado.
+<samp> — exemplo de saída de um programa.
+<var> — variável em explicações técnicas.
+
+Exemplo:
+<p><strong>Atenção:</strong> leia as instruções.</p>
+<p>Este assunto é <em>importante</em>.</p>
+<p>A fórmula da água é H<sub>2</sub>O.</p>
+<p>O resultado é 5<sup>2</sup> = 25.</p>
+<p>Comando: <code>console.log("Olá")</code></p>
+<pre>
+linha 1
+    linha 2 com espaços
+</pre>
+
+4. LISTAS
+----------
+
+<ul> — lista sem ordem numérica, como uma lista de recursos.
+<ol> — lista ordenada, como etapas de um tutorial.
+<li> — item de uma lista; deve ficar dentro de <ul> ou <ol>.
+<dl> — lista de termos e descrições.
+<dt> — termo de uma lista de descrição.
+<dd> — descrição de um termo.
+
+Exemplo:
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+</ul>
+
+<ol>
+    <li>Criar o arquivo</li>
+    <li>Escrever o HTML</li>
+    <li>Abrir no navegador</li>
+</ol>
+
+<dl>
+    <dt>HTML</dt>
+    <dd>Define a estrutura do conteúdo.</dd>
+</dl>
+
+5. LINKS E NAVEGAÇÃO
+--------------------
+
+<a> — cria um link para uma página, arquivo, endereço de e-mail ou seção.
+href — atributo que define o destino do link.
+target="_blank" — abre o destino em outra aba/janela.
+rel="noopener noreferrer" — recomendado com target="_blank" por segurança e privacidade.
+id — pode identificar uma seção para navegação por fragmento.
+
+Exemplos:
+<a href="https://developer.mozilla.org/">Aprender HTML</a>
+<a href="#contato">Ir para contato</a>
+<a href="https://example.com/" target="_blank" rel="noopener noreferrer">Abrir em outra aba</a>
+<a href="mailto:contato@example.com">Enviar e-mail</a>
+
+Para o link #contato funcionar, algum elemento deve ter id="contato".
+
+6. IMAGENS E CONTEÚDO INCORPORADO
+---------------------------------
+
+<img> — exibe uma imagem. É uma tag sem fechamento.
+src — endereço ou caminho do arquivo da imagem.
+alt — descrição textual da imagem; use alt="" se a imagem for puramente decorativa.
+width e height — podem definir dimensões; informe as proporções corretas para evitar distorções.
+<figure> — agrupa uma imagem, ilustração ou outro conteúdo independente.
+<figcaption> — legenda de um figure.
+<picture> — permite escolher imagens diferentes conforme as condições.
+<source> — fornece fontes alternativas dentro de picture, audio ou video.
+<audio> — incorpora áudio.
+<video> — incorpora vídeo.
+<track> — adiciona legendas ou outras faixas de texto ao vídeo/áudio.
+<iframe> — incorpora outra página ou conteúdo externo; use com cuidado e apenas de fontes confiáveis.
+
+Exemplo:
+<figure>
+    <img src="imagens/paisagem.jpg" alt="Montanhas ao pôr do sol" width="600" height="400">
+    <figcaption>Paisagem ao pôr do sol.</figcaption>
+</figure>
+
+<video controls width="600">
+    <source src="videos/apresentacao.mp4" type="video/mp4">
+    Seu navegador não consegue reproduzir este vídeo.
+</video>
+
+7. HTML SEMÂNTICO E ORGANIZAÇÃO DA PÁGINA
+-----------------------------------------
+
+<header> — cabeçalho de uma página ou seção.
+<nav> — conjunto principal de links de navegação.
+<main> — conteúdo principal da página; normalmente deve haver apenas um main visível.
+<section> — seção temática de conteúdo, geralmente com título.
+<article> — conteúdo independente, como notícia, postagem ou artigo.
+<aside> — conteúdo complementar ou relacionado.
+<footer> — rodapé de uma página ou seção.
+<address> — informações de contato do autor ou responsável pelo conteúdo.
+<search> — área destinada a controles de pesquisa.
+<details> — bloco que pode ser aberto e fechado pelo usuário.
+<summary> — título clicável de um details.
+<dialog> — caixa de diálogo ou janela modal; seu comportamento depende de como é aberta.
+<hgroup> — agrupa um título com conteúdo de subtítulo, quando apropriado.
+
+Exemplo:
+<header>
+    <h1>Meu portal</h1>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+    </nav>
+</header>
+<main id="inicio">
+    <section id="sobre">
+        <h2>Sobre o projeto</h2>
+        <p>Descrição do projeto.</p>
+    </section>
+    <article>
+        <h2>Novidade</h2>
+        <p>Texto da notícia.</p>
+    </article>
+    <aside>Leia também outros conteúdos.</aside>
+</main>
+<footer>
+    <p>© 2026 Meu portal</p>
+</footer>
+
+Observação: header não significa obrigatoriamente “topo da tela”; pode ser o cabeçalho de uma seção. O posicionamento visual é definido com CSS.
+
+8. TABELAS
+-----------
+
+<table> — cria uma tabela para dados tabulares, não para organizar todo o layout.
+<caption> — título ou legenda da tabela.
+<thead> — agrupa o cabeçalho da tabela.
+<tbody> — agrupa as linhas principais.
+<tfoot> — agrupa o rodapé ou resumo.
+<tr> — linha da tabela.
+<th> — célula de cabeçalho.
+<td> — célula de dados.
+colspan — faz uma célula ocupar várias colunas.
+rowspan — faz uma célula ocupar várias linhas.
+
+Exemplo:
+<table>
+    <caption>Notas da turma</caption>
+    <thead>
+        <tr><th scope="col">Aluno</th><th scope="col">Nota</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Ana</td><td>9</td></tr>
+        <tr><td>João</td><td>8</td></tr>
+    </tbody>
+</table>
+
+9. FORMULÁRIOS E ENTRADAS
+-------------------------
+
+<form> — agrupa controles e define como os dados serão enviados.
+<label> — rótulo de um campo; associe-o ao campo usando for e id.
+<input> — campo de entrada. O tipo é escolhido com type.
+<textarea> — campo de texto com várias linhas.
+<button> — botão para executar uma ação ou enviar formulário.
+<select> — lista suspensa.
+<option> — opção dentro de select ou datalist.
+<optgroup> — agrupa opções de um select.
+<fieldset> — agrupa campos relacionados.
+<legend> — título de um fieldset.
+<datalist> — sugestões para um input.
+<output> — mostra o resultado de um cálculo ou ação.
+<meter> — valor dentro de uma faixa conhecida, como nível de uso.
+<progress> — progresso de uma tarefa.
+
+Tipos comuns de input:
+text, password, email, number, tel, url, date, time, checkbox, radio, file, range, color, search, submit, reset, button, hidden.
+
+Atributos úteis:
+name — nome usado para identificar o dado enviado.
+id — identificador único do elemento.
+value — valor inicial ou atual.
+placeholder — dica dentro do campo; não substitui label.
+required — torna o preenchimento obrigatório.
+min e max — limites para valores numéricos ou datas compatíveis.
+minlength e maxlength — limites de caracteres em tipos compatíveis.
+checked — deixa checkbox/radio selecionado inicialmente.
+disabled — desativa um controle.
+readonly — impede edição, mas mantém o valor disponível para envio.
+autocomplete — orienta o navegador sobre preenchimento automático.
+
+Exemplo:
+<form action="/cadastro" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+    <label for="categoria">Categoria:</label>
+    <select id="categoria" name="categoria">
+        <option value="duvida">Dúvida</option>
+        <option value="sugestao">Sugestão</option>
+    </select>
+
+    <button type="submit">Enviar</button>
+</form>
+
+Importante: HTML sozinho não salva dados em um banco de dados. Para processar e armazenar informações, normalmente é necessário um backend ou serviço apropriado.
+
+10. ELEMENTOS INTERATIVOS E SCRIPT
+----------------------------------
+
+<button> — botão para ações.
+<details> e <summary> — conteúdo expansível sem JavaScript obrigatório.
+<dialog> — diálogo que pode ser controlado com JavaScript.
+<noscript> — mensagem exibida quando JavaScript está desativado.
+<script> — inclui ou referencia JavaScript.
+<template> — guarda conteúdo HTML que não é exibido até ser usado por JavaScript.
+<canvas> — área de desenho controlada normalmente por JavaScript.
+<svg> — incorpora gráficos vetoriais escaláveis.
+<slot> — ponto de inserção de conteúdo usado em Web Components.
+
+Exemplo:
+<button type="button" onclick="alert('Olá!')">Clique aqui</button>
+
+Forma recomendada para projetos maiores: manter JavaScript em arquivo separado.
+<button id="meuBotao" type="button">Clique aqui</button>
+<script src="script.js" defer></script>
+
+No arquivo script.js:
+document.getElementById("meuBotao").addEventListener("click", function () {
+    alert("Olá!");
+});
+
+11. METADADOS E RECURSOS DO HEAD
+-------------------------------
+
+<meta> — fornece metadados, como codificação, viewport e descrição.
+<link> — relaciona arquivos externos, normalmente CSS, ícone ou outros recursos.
+<style> — contém regras CSS dentro do HTML.
+<base> — define a URL base para links relativos; use somente quando necessário.
+<title> — título da página na aba do navegador.
+
+Exemplo:
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de apresentação do meu projeto.">
+    <title>Meu projeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+12. ATRIBUTOS GLOBAIS IMPORTANTES
+--------------------------------
+
+id — identificador único na página; útil para CSS, JavaScript e links internos.
+class — classifica um ou mais elementos para CSS e JavaScript.
+style — aplica CSS diretamente no elemento; prefira arquivo ou bloco CSS para facilitar manutenção.
+title — informação complementar, frequentemente exibida como dica.
+data-* — permite guardar dados personalizados em atributos, por exemplo data-produto="jogo".
+hidden — indica que o elemento não deve ser exibido.
+tabindex — controla a participação e ordem de foco pelo teclado; use com cuidado.
+contenteditable — permite editar o conteúdo diretamente na página.
+draggable — indica se um elemento pode ser arrastado em contextos compatíveis.
+lang — idioma do conteúdo.
+dir — direção do texto, como ltr ou rtl.
+
+Exemplo:
+<p id="introducao" class="texto destaque" data-tipo="aviso">
+    Texto de exemplo.
+</p>
+
+13. CARACTERES ESPECIAIS (ENTIDADES HTML)
+-----------------------------------------
+
+&lt; — mostra o sinal menor que: <
+&gt; — mostra o sinal maior que: >
+&amp; — mostra o e comercial: &
+&quot; — mostra aspas duplas: "
+&apos; — mostra apóstrofo: '
+&nbsp; — espaço que não deve ser quebrado em uma nova linha.
+
+Exemplo para exibir uma tag como texto:
+<p>Para criar um parágrafo, escreva &lt;p&gt;Texto&lt;/p&gt;.</p>
+
+14. COMENTÁRIOS
+---------------
+
+<!-- Comentário: o navegador não exibe este texto como conteúdo normal. -->
+
+Use comentários para explicar partes importantes do código. Não coloque senhas ou tokens secretos em comentários.
+
+15. CORREÇÕES E BOAS PRÁTICAS DO CÓDIGO ORIGINAL
+-----------------------------------------------
+
+1. Use <!DOCTYPE html> sem asteriscos, barras invertidas ou espaços extras.
+2. Use <html lang="pt-BR"> para indicar português do Brasil.
+3. Escreva as tags normalmente: <strong>, não <srong>.
+4. O correto é “negrito”, “identificador”, “ênfase” e “caracteres especiais”.
+5. O intervalo de títulos é h1 até h6, não h1 até h1.
+6. O nome do atributo é class, e ele pode ser usado em vários elementos. O id deve ser único por página.
+7. data-* não significa que se pode colocar qualquer atributo sem regra: use nomes como data-produto ou data-id para dados personalizados.
+8. style aplica CSS inline, mas CSS separado costuma ser mais fácil de manter.
+9. A tag de imagem é <img> e não precisa de fechamento.
+10. Em links com target="_blank", use rel="noopener noreferrer".
+11. alt deve descrever a imagem quando ela transmite informação; imagens decorativas podem usar alt="".
+12. Um h1 principal por página é uma convenção útil, mas a estrutura deve refletir a hierarquia do conteúdo. Não use títulos apenas para aumentar letras.
+13. header, main, aside e footer são elementos semânticos; CSS decide onde aparecem visualmente.
+14. “SEO” significa otimização para mecanismos de busca. HTML semântico ajuda mecanismos e tecnologias assistivas a entenderem a página, mas não garante uma posição específica nos resultados.
+15. JavaScript é escrito em <script> ou em um arquivo .js; CSS em <style> ou em um arquivo .css.
+
+16. MODELO FINAL PARA COMEÇAR UM SITE
+-------------------------------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uma breve descrição da página.">
+    <title>Meu primeiro site</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Meu primeiro site</h1>
+        <nav aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Estou aprendendo a criar páginas com HTML.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Meu site</p>
+    </footer>
+</body>
+</html>
+
+FIM DO GUIA

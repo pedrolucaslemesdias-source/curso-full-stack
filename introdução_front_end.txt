@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Full-Stack
 ferramentas: figma: designer
@@ -436,3 +437,6 @@ Use comentários para explicar partes importantes do código. Não coloque senha
 </html>
 
 FIM DO GUIA
+=======
+# 1 Apredendo html
+>>>>>>> 7fa8bd59fc38908c78d6bed1d888415758fafc5d

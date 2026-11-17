@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 2</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Qual é o seu nome ? ")
+        document.write(`Olá, ${nome} <br/>`)
+        document.write(`O seu nome possui ${nome.length} <br/>`)
+        document.write(`O seu nome em letra Maiuscula ${nome.toUpperCase()} <br/>`)
+        document.write(`O seu nome em letras minusculas: ${nome.toLowerCase()} <br/>`)
+        var salario = Number.parseFloat(window.prompt("Informe a sua media salarial"))
+        salario.toFixed(3)
+        salario.toLocaleString('pt-BR' , {style: 'currency', currency:'USD'})
+        document.write(`salario ${salario}`)
+    </script>
+</body>
+</html>
